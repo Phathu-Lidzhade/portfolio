@@ -1,8 +1,14 @@
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
     <>
-      <h1>Phathu</h1>
-      <p>Computer Science Student & Software Developer</p>
+      <Navbar />
+
+      <main>
+        <h1>Hey, I'm Phathu</h1>
+        <p>Computer Science Student & Software Developer</p>
+      </main>
     </>
   );
 }
