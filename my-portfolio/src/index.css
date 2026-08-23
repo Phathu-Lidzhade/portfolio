@@ -94,6 +94,39 @@ body {
   font-weight: bold;
 }
 
+.about {
+  padding: 6rem 8%;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  margin-bottom: 2rem;
+}
+
+.about-heading p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.about-heading h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  max-width: 700px;
+}
+
+.about-content{
+  max-width: 750px;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
