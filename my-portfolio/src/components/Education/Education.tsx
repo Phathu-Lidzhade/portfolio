@@ -6,11 +6,23 @@ interface EducationItem {
 }
 const education: EducationItem[] = [
   {
-  institution: "University Of Venda",
-  qualification: "Bachelor of Science in Computer Science",
-  period: "2022 - 2026",
-  description: "Studying computer science with a focus on software development, algorithms, database design, networking, artificial intelligence and software engineering.",
-}
+    institution: "University Of Venda",
+    qualification: "Bachelor of Science in Computer Science",
+    period: "2022 - 2026",
+    description: "Studying computer science with a focus on software development, algorithms, database design, networking, artificial intelligence and software engineering.",
+  },
+  {
+    institution: "IT Varsity",
+    qualification: "FNB App Academy Certificate in FullStack Development",
+    period: "May 2025 - August 2025",
+    description: "Completed a short course hosted by FNB in collaboration with IT Varsity on FullStack Development, included HTML, CSS and JavaScript frontend lessons, Python, API's and Django backend lessons and SQL database lessons.",
+  },
+  {
+    institution: "CSIR/UNIVEN",
+    qualification: "CSIR CyberSecurity Hackathon Participation Certificate",
+    period: "December 2025",
+    description: "Participated in a 3 day hackathon at the CSIR headquarters in Pretoria South Africa, worked as the developer in a 4 people team with varying roles.",
+  }
 ];
 
 function Education() {
