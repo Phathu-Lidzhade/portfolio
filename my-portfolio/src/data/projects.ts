@@ -1,5 +1,6 @@
 import residenceApplicationImage from "../assets/projects/residence-application.png";
 import gymManagementImage from "../assets/projects/gym-management.png";
+import monateChickenImage from "../assets/projects/monate-chicken.png";
 
 export interface Project {
   title: string;
@@ -33,7 +34,7 @@ const projects: Project[] = [
     title: "Monate Restaurant website",
     description: "A Restaurant website designed to allow customers to explore the menu and place food orders online",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
-    image: residenceApplicationImage,
+    image: monateChickenImage,
   },
 ];
 
