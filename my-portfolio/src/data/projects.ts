@@ -1,4 +1,5 @@
 import residenceApplicationImage from "../assets/projects/residence-application.png";
+import gymManagementImage from "../assets/projects/gym-management.png";
 
 export interface Project {
   title: string;
@@ -26,7 +27,7 @@ const projects: Project[] = [
     title: "Gym Management System",
     description: "A gym management platform for managing workout plans, routines, recommendations, and class schedules",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
-    image: residenceApplicationImage,
+    image: gymManagementImage,
   },
   {
     title: "Monate Restaurant website",
