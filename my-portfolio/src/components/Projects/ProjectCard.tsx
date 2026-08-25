@@ -8,7 +8,7 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="project-card">
       <div className="project-image">
-        <span>Project Preview</span>
+        <img src={project.image} alt={`${project.title} screenshot`} />
       </div>
 
       <div className="project-content">
