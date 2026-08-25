@@ -8,7 +8,7 @@ export interface Project {
   description: string;
   technologies: string[];
   image: string;
-  //githubUrl: string;
+  githubUrl: string;
   //liveUrl: string;
 }
 
@@ -18,24 +18,28 @@ const projects: Project[] = [
     description: "A web application that allows students ro apply for residence while administrators manage application and residence allocation",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
     image: residenceApplicationImage,
+    githubUrl: "https://github.com/Phathu-Lidzhade/student-residence-application-system.git",
   },
   {
     title: "Online Pharmacy",
     description: "An e-commerce style pharmacy system where users can browse products, place orders, and view their order history",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
     image: pharmacyImage,
+    githubUrl: "https://github.com/Phathu-Lidzhade/health-website-project.git",
   },
   {
     title: "Gym Management System",
     description: "A gym management platform for managing workout plans, routines, recommendations, and class schedules",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
     image: gymManagementImage,
+    githubUrl: "https://github.com/Phathu-Lidzhade/world-of-fitness.git",
   },
   {
     title: "Monate Restaurant website",
     description: "A Restaurant website designed to allow customers to explore the menu and place food orders online",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
     image: monateChickenImage,
+    githubUrl: "https://github.com/Phathu-Lidzhade/monate-website.git",
   },
 ];
 
