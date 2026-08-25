@@ -1,6 +1,7 @@
 import residenceApplicationImage from "../assets/projects/residence-application.png";
 import gymManagementImage from "../assets/projects/gym-management.png";
 import monateChickenImage from "../assets/projects/monate-chicken.png";
+import pharmacyImage from "../assets/projects/pharmacy.png";
 
 export interface Project {
   title: string;
@@ -22,7 +23,7 @@ const projects: Project[] = [
     title: "Online Pharmacy",
     description: "An e-commerce style pharmacy system where users can browse products, place orders, and view their order history",
     technologies: ["PHP", "MySQL", "Javascript", "Html", "CSS", "XAMPP"],
-    image: residenceApplicationImage,
+    image: pharmacyImage,
   },
   {
     title: "Gym Management System",
