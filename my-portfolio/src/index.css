@@ -1,11 +1,46 @@
+:root {
+  --background: #ffffff;
+  --surface: #f7f7f7;
+  --text: #111111;
+  --text-muted: #666666;
+  --border: #e5e5e5;
+  --accent: #5b5b5b;
+  --accent-dark: #464646;
+
+  --max-width: 1200px;
+
+  --section-padding: 6rem 8%;
+
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
 }
 
 .hero {
@@ -60,18 +95,37 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+
+  transition: 
+    background 0.2s ease,
+    color 0.2 ease,
+    border-color 0.2 ease,
+    transform 0.2 ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .primary-btn {
-  background: #111;
+  background: var(--accent);
   color: white;
   padding: 5px;
 }
 
+.primary-btn:hover {
+  background: var(--accent-dark);
+}
+
 .secondary-btn {
-  border: 1px solid #111;
-  color: #111;
+  border: 1px solid var(--border);
+  color: var(--text);
   padding: 5px;
+}
+
+.secondary-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .hero-visual{
@@ -95,7 +149,7 @@ body {
 }
 
 .about {
-  padding: 6rem 8%;
+  padding: var(--section-padding);
 }
 
 .about-container {
@@ -128,7 +182,7 @@ body {
 }
 
 .skills{
-  padding: 6rem 8%;
+  padding: var(--section-padding);
 }
 
 .skills-container {
@@ -179,7 +233,7 @@ body {
 }
 
 .projects {
-  padding: 6rem 8%;
+  padding: var(--section-padding);
 }
 
 .projects-container {
@@ -259,7 +313,7 @@ body {
 }
 
 .education {
-  padding: 6rem 8%;
+  padding: var(--section-padding);
 }
 
 .education-container {
@@ -314,8 +368,13 @@ body {
   line-height: 1.7;
 }
 
+.skills,
+.education {
+  background: var(--surface);
+}
+
 .contact {
-  padding: 6rem 8%;
+  padding: var(--section-padding);
 }
 
 .contact-container {
@@ -405,8 +464,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: white;
-  border-bottom: 1px solid #eee;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar-container {
@@ -421,7 +480,7 @@ body {
 }
 
 .navbar-logo {
-  color: #111;
+  color: var(--text);
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
@@ -518,8 +577,8 @@ body {
 
     padding: 1.5rem 6%;
 
-    background: white;
-    border-bottom: 1px solid #eee;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
   }
 
   .nav-menu.open {
