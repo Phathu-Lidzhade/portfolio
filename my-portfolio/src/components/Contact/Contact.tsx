@@ -24,7 +24,7 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub
+                Phathu Lidzhade
               </a>
             </div>
 
@@ -34,7 +34,7 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LinkedIn
+                Phathutshedzo Lidzhade
               </a>
             </div>
 
