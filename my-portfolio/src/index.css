@@ -273,8 +273,17 @@ textarea {
 
 .project-card {
   overflow: hidden;
-  border: 1px solid #ddd;
-  border-radius: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-medium);
+  background: var(--background);
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .project-image {
@@ -291,11 +300,11 @@ textarea {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover .project-image img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .project-content {
@@ -308,6 +317,7 @@ textarea {
 }
 
 .project-content p {
+  color: var(--text);
   line-height: 1.7;
   margin-bottom: 1.25rem;
 }
@@ -323,7 +333,7 @@ textarea {
   padding: 0.4rem 0.7rem;
   background: #f1f1f1;
   border-radius: 6px;
-  font-size: 0.85;
+  font-size: 0.85rem;
 }
 
 .project-links {
@@ -332,8 +342,13 @@ textarea {
 }
 
 .project-links a {
-  color: inherit;
+  color: var(--accent-dark);
+  text-decoration: none;
   font-weight: 600;
+}
+
+.project-links a:hover {
+  color: black;
 }
 
 .education {

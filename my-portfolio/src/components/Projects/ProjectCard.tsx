@@ -21,27 +21,27 @@ function ProjectCard({ project }: ProjectCardProps) {
             <span key={technology}>{technology}</span>
           ))}
         </div>
-
+        
+        {(project.githubUrl || project.liveUrl) &&(
         <div className="project-links">
           {project.githubUrl && (
             <a href={project.githubUrl}
                 target="_blank"
                 rel="noonpoener noreferrer">
-                  Open on GitHub
+                  ● GitHub ↗
                 </a>
           )}
         
-          {/*
           {project.liveUrl && (
             <a href={project.liveUrl}
                 target="_blank"
                 rel="noonpoener noreferrer">
-                  Live Demo
+                  ● Live Demo
                 </a>
           )}
-          */}
-        </div>
         
+        </div>
+        )}
         
       </div>
     </article>
