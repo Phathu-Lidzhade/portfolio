@@ -118,7 +118,7 @@ textarea {
 }
 
 .secondary-btn {
-  border: 1px solid var(--border);
+  border: 2px solid #666666;
   color: var(--text);
   padding: 5px;
 }
@@ -146,6 +146,17 @@ textarea {
 .hero-card span {
   font-size: 5rem;
   font-weight: bold;
+}
+
+.hero-stack {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.hero-opportunity{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about {

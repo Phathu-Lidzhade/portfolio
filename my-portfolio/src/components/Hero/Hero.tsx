@@ -8,9 +8,15 @@ function Hero() {
           <span>Lidzhade</span>
         </h1>
 
-        <h2>Computer Science Student & Aspiring Software Developer</h2>
+        <h2>I build software that solves real problems.</h2>
 
-        <p className="hero-description">I build web applications and software solutions while continuously learning and exploring new technologies</p>
+        <p className="hero-description">Computer Science graduate focused on web development and software engineering and modern technologies</p>
+
+        <span className="hero-stack">
+          React ● TypeScript ● Node.js ● MySQL
+        </span>
+
+        <p className="hero-opportunity">● Open to opportunities</p>
 
         <div className="hero-buttons">
           <a href="#projects" className="btn primary-btn">
