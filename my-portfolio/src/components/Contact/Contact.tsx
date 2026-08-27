@@ -1,4 +1,73 @@
+import React, { useState, type FormEvent } from "react";
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 function Contact() {
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+
+    setFormData((previousData) => ({
+      ...previousData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    setIsSubmitting(true);
+    setStatus("");
+
+    try {
+      const response = await fetch(" http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong.");
+      }
+
+      setStatus(data.message);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+    } catch (error) {
+      setStatus(
+        error instanceof Error
+        ? error.message
+        : "Unable to send your message."
+      );
+    }
+    finally {
+    setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
@@ -40,14 +109,17 @@ function Contact() {
 
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input 
                 type="text" 
                 id="name"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your name"
+                required
               />
             </div>
 
@@ -57,7 +129,10 @@ function Contact() {
                 type="email" 
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Your@email.com"
+                required
               />
             </div>
 
@@ -66,12 +141,19 @@ function Contact() {
               <textarea
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows={6}
                 placeholder="Your message..."
+                required
               />
             </div>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </button>
+
+            {status && <p className="form-status">{status}</p>}
 
           </form>
         </div>
