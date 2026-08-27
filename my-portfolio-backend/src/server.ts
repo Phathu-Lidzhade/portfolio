@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import contactRoutes from "./routes/contactRoutes";
 
 const app = express();
 
@@ -14,6 +15,8 @@ app.get("/api/health", (_req, res) => {
     message: "Portfolio backend is running",
   });
 });
+
+app.use("/api/contact", contactRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
