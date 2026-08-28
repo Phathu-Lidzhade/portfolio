@@ -12,10 +12,33 @@ export const submitContactForm = (
 ) => {
   const { name, email, message } = req.body;
 
-  if (!name || !email || !message) {
+  if (!name?.trim() || !email?.trim() || !message?.trim()) {
     return res.status(400).json({
       success: false,
-      message: "Name, email and message are required.",
+      message: "All fields are required.",
+    });
+  }
+
+  if (name.trim().length < 2) {
+    return res.status(400).json({
+      success: false,
+      message: "Name must be at least 2 Characters.",
+    });
+  }
+
+  if (message.trim().length < 10) {
+    return res.status(400).json({
+      success: false,
+      message: "Message must be at least 10 Characters.",
+    });
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(email.trim())) {
+    return res.status(400).json({
+      success: false,
+      message: "Please provide a valid email address.",
     });
   }
 

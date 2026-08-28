@@ -4,7 +4,7 @@ function Hero() {
       <div className="hero-content">
         <p className="hero-greeting">Hi, I'm</p>
         <h1>
-          Phathu
+          Phathutshedzo
           <span>Lidzhade</span>
         </h1>
 
@@ -34,7 +34,16 @@ function Hero() {
 
       <div className="hero-visual">
         <div className="hero-card">
-          <span>&lt;/&gt;</span>
+          <span>
+            {'● ● ●'} <br />
+            {'const developer = {'} <br />
+            {'name: "Phathutshedzo",'} <br />
+            {'stack: ["React",'} <br />
+            {'"TypeScript"],'} <br />
+            {'learning: "Node.js"'} <br />
+            {'};'}
+          </span>
+          <p></p>
         </div>
       </div>
     </section>

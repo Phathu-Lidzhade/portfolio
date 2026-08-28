@@ -82,8 +82,8 @@ function Contact() {
           <div className="contact-details">
             <div className="contact-item">
               <h3>Email</h3>
-              <a href="mailto:lidzhadephathuthsedzo027@gmail.com">
-                lidzhadephathuthsedzo027@gmail.com
+              <a href="mailto:lidzhadephathutshedzo027@gmail.com">
+                lidzhadephathutshedzo027@gmail.com
               </a>
             </div>
 
