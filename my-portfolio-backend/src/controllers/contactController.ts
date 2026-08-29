@@ -1,4 +1,7 @@
 import type { Request, Response } from "express";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 interface ContactRequest {
   name: string;
@@ -6,7 +9,7 @@ interface ContactRequest {
   message: string;
 }
 
-export const submitContactForm = (
+export const submitContactForm = async (
   req: Request<{}, {}, ContactRequest>,
   res:Response
 ) => {
@@ -42,15 +45,36 @@ export const submitContactForm = (
     });
   }
 
-  console.log("New contact message:");
-  console.log({
-    name,
-    email,
-    message,
+  const { data, error } = await resend.emails.send({
+    from: "onboarding@resend.dev",
+    to: ["lidzhadephathutshedzo027@gmail.com"],
+    subject: `Portfolio contact from ${name.trim()}`,
+    html: `
+      <h2>New Portfolio Contact</h2>
+
+      <p><strong>Name:</strong> ${name.trim()}</p>
+
+      <p><strong>Email:</strong> ${email.trim()}</p>
+
+      <p><strong>Message:</strong></p>
+
+      <p>${message.trim()}</p>
+      `,
   });
+
+  if (error) {
+    console.error("Resend error:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: "Unable to send your message.",
+    });
+  }
+
+  console.log("Email sent:", data);
 
   return res.status(200).json({
     success: true,
-    message: "Message received successfully.",
+    message: "Message send successfully.",
   });
 };
