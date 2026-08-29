@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import { Resend } from "resend";
+import { escapeHtml } from "../utils/escapeHtml";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -45,20 +46,24 @@ export const submitContactForm = async (
     });
   }
 
+  const safeName = escapeHtml(name.trim());
+  const safeEmail = escapeHtml(email.trim());
+  const safeMessage = escapeHtml(message.trim());
+
   const { data, error } = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: ["lidzhadephathutshedzo027@gmail.com"],
-    subject: `Portfolio contact from ${name.trim()}`,
+    to: [process.env.CONTACT_EMAIL!],
+    subject: `Portfolio contact from ${safeName}`,
     html: `
       <h2>New Portfolio Contact</h2>
 
-      <p><strong>Name:</strong> ${name.trim()}</p>
+      <p><strong>Name:</strong> ${safeName}</p>
 
-      <p><strong>Email:</strong> ${email.trim()}</p>
+      <p><strong>Email:</strong> ${safeEmail}</p>
 
       <p><strong>Message:</strong></p>
 
-      <p>${message.trim()}</p>
+      <p>${safeMessage}</p>
       `,
   });
 
