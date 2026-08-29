@@ -46,6 +46,10 @@ export const submitContactForm = async (
     });
   }
 
+  const cleanName = name.trim();
+  const cleanEmail = email.trim();
+  const cleanMessage = message.trim();
+
   const safeName = escapeHtml(name.trim());
   const safeEmail = escapeHtml(email.trim());
   const safeMessage = escapeHtml(message.trim());
@@ -53,7 +57,7 @@ export const submitContactForm = async (
   const { data, error } = await resend.emails.send({
     from: "onboarding@resend.dev",
     to: [process.env.CONTACT_EMAIL!],
-    subject: `Portfolio contact from ${safeName}`,
+    subject: `Portfolio contact from ${cleanName}`,
     html: `
       <h2>New Portfolio Contact</h2>
 
