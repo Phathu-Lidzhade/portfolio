@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import contactRoutes from "./routes/contactRoutes";
+import { env } from "./config/env";
 
 const app = express();
 
@@ -9,7 +10,7 @@ const PORT = 5000;
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: env.frontendUrl,
   })
 );
 app.use(express.json());

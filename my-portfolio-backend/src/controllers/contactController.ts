@@ -1,8 +1,9 @@
 import type { Request, Response } from "express";
 import { Resend } from "resend";
 import { escapeHtml } from "../utils/escapeHtml";
+import { env } from "../config/env";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(env.resendApiKey);
 
 interface ContactRequest {
   name: string;
@@ -56,7 +57,7 @@ export const submitContactForm = async (
 
   const { data, error } = await resend.emails.send({
     from: "onboarding@resend.dev",
-    to: [process.env.CONTACT_EMAIL!],
+    to: [env.contactEmail],
     subject: `Portfolio contact from ${cleanName}`,
     html: `
       <h2>New Portfolio Contact</h2>
