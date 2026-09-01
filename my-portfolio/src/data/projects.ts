@@ -9,7 +9,7 @@ export interface Project {
   technologies: string[];
   image: string;
   githubUrl: string;
-  //liveUrl: string;
+  liveUrl?: string;
 }
 
 const projects: Project[] = [
