@@ -1,3 +1,5 @@
+import profilePhoto from '../../assets/profile.jpg';
+
 function Hero() {
   return (
     <section className="hero" id="home">
@@ -33,6 +35,11 @@ function Hero() {
       </div>
 
       <div className="hero-visual">
+
+        <div className="hero-photo">
+          <img src={profilePhoto} alt="Phathutshedzo Lidzhade" />
+        </div>
+
         <div className="hero-card">
           <span>
             {'● ● ●'} <br />

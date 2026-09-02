@@ -91,7 +91,7 @@ textarea {
 
 .btn {
   display: inline-block;
-  padding: 0.9rem, 1.5rem;
+  padding: 0.9rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -130,8 +130,25 @@ textarea {
 
 .hero-visual{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 4px solid var(--accent);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .hero-card {
@@ -624,6 +641,11 @@ textarea {
 
   .hero-visual {
     width: 100%;
+  }
+
+  .hero-photo {
+    width: 180px;
+    height: 180px;
   }
 
   .hero-card {
