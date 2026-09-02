@@ -1,10 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+
+    if (storedTheme) {
+      return storedTheme === "dark";
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDarkMode ? "dark" : "light"
+    );
+
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
+
+  const toggleTheme = () => {
+    setIsDarkMode((currentMode) => !currentMode);
   };
 
   return (
@@ -50,6 +72,15 @@ function Navbar() {
           <a href="#contact" onClick={closeMenu}>
             Contact
           </a>
+
+          <button 
+            type="button"
+            className="theme-toggle" 
+            onClick={toggleTheme}
+            aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
+          >
+            {isDarkMode ? "☀️" : "🌙"}
+          </button>
         </nav>
       </div>
     </header>

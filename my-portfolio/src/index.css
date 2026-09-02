@@ -1,11 +1,20 @@
 :root {
   --background: #ffffff;
   --surface: #f7f7f7;
+
   --text: #111111;
   --text-muted: #666666;
+
   --border: #e5e5e5;
+
   --accent: #5b5b5b;
-  --accent-dark: #464646;
+  --accent-dark: #3f3f3f;
+  --accent-text: #ffffff;
+
+  --footer-background: #111111;
+  --footer-text: #ffffff;
+  --footer-muted: #aaaaaa;
+  --footer-border: #333333;
 
   --max-width: 1200px;
 
@@ -14,6 +23,25 @@
   --radius-small: 8px;
   --radius-medium: 16px;
   --radius-large: 24px;
+}
+
+[data-theme="dark"] {
+  --background: #111111;
+  --surface: #1b1b1b;
+
+  --text: #f5f5f5;
+  --text-muted: #aaaaaa;
+
+  --border: #333333;
+
+  --accent: #a0a0a0;
+  --accent-dark: #c0c0c0;
+  --accent-text: #111111;
+
+  --footer-background: #080808;
+  --footer-text: #f5f5f5;
+  --footer-muted: #999999;
+  --footer-border: #2a2a2a;
 }
 
 * {
@@ -31,6 +59,7 @@ body {
   background: var(--background);
   color: var(--text);
   line-height: 1.5;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 a {
@@ -98,9 +127,9 @@ textarea {
 
   transition: 
     background 0.2s ease,
-    color 0.2 ease,
-    border-color 0.2 ease,
-    transform 0.2 ease;
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn:hover {
@@ -157,7 +186,7 @@ textarea {
   border-radius: 24px;
   display: flex;
   justify-content: center;
-  background: #f1f1f1;
+  background: var(--surface);
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -169,7 +198,7 @@ textarea {
 }
 
 .hero-stack {
-  background: #f1f1f1;
+  background: var(--surface);
   padding: 10px;
   border-radius: 20px;
 }
@@ -242,7 +271,7 @@ textarea {
 
 .skills-category {
   padding: 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 16px;
 }
 
@@ -258,7 +287,7 @@ textarea {
 
 .skill {
   padding: 0.6rem 1rem;
-  background: #f1f1f1;
+  background: var(--surface);
   border-radius: 999px;
   font-size: 0.95rem;
 }
@@ -351,7 +380,7 @@ textarea {
 
 .project-technologies span {
   padding: 0.4rem 0.7rem;
-  background: #f1f1f1;
+  background: var(--surface);
   border-radius: 6px;
   font-size: 0.85rem;
 }
@@ -368,7 +397,7 @@ textarea {
 }
 
 .project-links a:hover {
-  color: black;
+  color: var(--accent);
 }
 
 .education {
@@ -404,7 +433,7 @@ textarea {
   grid-template-columns: 150px 1fr;
   gap: 2rem;
   padding: 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   border-radius: 16px;
 }
 
@@ -505,7 +534,9 @@ textarea {
 .form-group textarea {
   width: 100%;
   padding: 0.9rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
+  background: var(--background);
+  color: var(--text);
   border-radius: 8px;
   font: inherit;
   resize: vertical;
@@ -515,12 +546,18 @@ textarea {
   align-self: flex-start;
   padding: 0.9rem 1.5rem;
   border: none;
-  border-radius: 8px;
-  background: #111;
-  color: white;
+  border-radius: var(--radius-small);
+  background: var(--accent);
+  color: var(--accent-text);
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
 }
 
 .navbar {
@@ -549,6 +586,30 @@ textarea {
   font-weight: 700;
 }
 
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -556,14 +617,14 @@ textarea {
 }
 
 .nav-menu a {
-  color: #333;
+  color: var(--text);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
 }
 
 .nav-menu a:hover {
-  color: #000;
+  color: var(--accent);
 }
 
 .menu-button {
@@ -579,13 +640,13 @@ textarea {
   width: 25px;
   height: 2px;
   margin: 5px 0;
-  background: #111;
+  background: var(--text);
 }
 
-.footer{
+.footer {
   padding: 3rem 8% 1.5rem;
-  background: #111;
-  color: white;
+  background: var(--footer-background);
+  color: var(--footer-text);
 }
 
 .footer-container {
@@ -603,7 +664,7 @@ textarea {
 }
 
 .footer p {
-  color: #aaa;
+  color: var(--footer-muted);
 }
 
 .footer-links {
@@ -612,7 +673,7 @@ textarea {
 }
 
 .footer-links a {
-  color: white;
+  color: var(--footer-text);
   text-decoration: none;
 }
 
@@ -624,7 +685,7 @@ textarea {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-top: 1.5rem;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--footer-border);
   text-align: center;
 }
 
@@ -706,6 +767,10 @@ textarea {
   .nav-menu a {
     width: 100%;
     padding: 0.75rem 0;
+  }
+
+  .theme-toggle {
+    margin-top: 0.5rem;
   }
 
   .footer-container {
