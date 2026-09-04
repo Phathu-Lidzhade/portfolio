@@ -400,6 +400,43 @@ textarea {
   color: var(--accent);
 }
 
+.project-thumbnails {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.project-thumbnails button {
+  flex-shrink: 0;
+  width: 70px;
+  height: 50px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--surface);
+  transition: 
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project-thumbnails button:hover {
+  transform: translateY(-2px);
+}
+
+.project-thumbnails button.active {
+  border-color: var(--accent);
+}
+
+.project-thumbnails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .education {
   padding: var(--section-padding);
 }
