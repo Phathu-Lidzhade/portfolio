@@ -56,7 +56,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           {project.githubUrl && (
             <a href={project.githubUrl}
                 target="_blank"
-                rel="noonpoener noreferrer">
+                rel="noopener noreferrer">
                   ● GitHub ↗
                 </a>
           )}
@@ -64,7 +64,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           {project.liveUrl && (
             <a href={project.liveUrl}
                 target="_blank"
-                rel="noonpoener noreferrer">
+                rel="noopener noreferrer">
                   ● Live Demo
                 </a>
           )}
@@ -86,11 +86,39 @@ function ProjectCard({ project }: ProjectCardProps) {
             x
           </button>
 
+          <button
+            type="button"
+            className="viewer-nav viewer-prev"
+            onClick={() => 
+              setSelectedImage((current) => Math.max(current - 1, 0))
+            }
+            disabled={selectedImage === 0}
+            aria-label="Previous image"
+          >
+            {"‹"}
+          </button>
+
           <img 
             src={images[selectedImage]} 
             alt={`${project.title} screenshot ${selectedImage + 1}`}
             className="viewer-image"
           />
+
+          <button
+            type="button"
+            className="viewer-nav viewer-next"
+            onClick={() => 
+              setSelectedImage((current) => Math.min(current + 1, images.length - 1))
+            }
+            disabled={selectedImage === images.length - 1}
+            aria-label="Next image"
+          >
+            {"›"}
+          </button>
+
+          <div className="viewer-counter">
+            {selectedImage + 1} / {images.length}
+          </div>
         </div>
       )}
     </>

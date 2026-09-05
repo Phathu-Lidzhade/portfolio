@@ -403,6 +403,51 @@ textarea {
   background: rgba(255, 255, 255, 0.25);
 }
 
+.viewer-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.viewer-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.viewer-prev {
+  left: 1.5rem;
+}
+
+.viewer-next {
+  right: 1.5rem;
+}
+
+.viewer-counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.9rem;
+}
+
 .project-content {
   padding: 1.5rem;
 }
