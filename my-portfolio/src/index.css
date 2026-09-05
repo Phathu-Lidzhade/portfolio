@@ -350,10 +350,57 @@ textarea {
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
+  cursor: pointer;
 }
 
 .project-card:hover .project-image img {
   transform: scale(1.04);
+}
+
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.viewer-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-small);
+}
+
+.viewer-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.viewer-close:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .project-content {

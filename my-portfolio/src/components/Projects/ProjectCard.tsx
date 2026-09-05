@@ -11,13 +11,16 @@ function ProjectCard({ project }: ProjectCardProps) {
   const images = getProjectImages(project.imageFolder);
 
   const [selectedImage, setSelectedImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
 
   return (
+    <>
     <article className="project-card">
       <div className="project-image">
         <img 
           src={images[selectedImage]} 
-          alt={`${project.title} screenshot ${selectedImage + 1}`} 
+          alt={`${project.title} screenshot ${selectedImage + 1}`}
+          onClick={() => setIsViewerOpen(true)} 
         />
       </div>
 
@@ -71,6 +74,26 @@ function ProjectCard({ project }: ProjectCardProps) {
         
       </div>
     </article>
+
+    {isViewerOpen && (
+        <div className="image-viewer">
+          <button 
+            type="button"
+            className="viewer-close"
+            onClick={() => setIsViewerOpen(false)}
+            aria-label="Close image viewer"
+          >
+            x
+          </button>
+
+          <img 
+            src={images[selectedImage]} 
+            alt={`${project.title} screenshot ${selectedImage + 1}`}
+            className="viewer-image"
+          />
+        </div>
+      )}
+    </>
   );
 }
 
