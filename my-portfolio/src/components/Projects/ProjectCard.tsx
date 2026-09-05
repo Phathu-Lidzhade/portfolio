@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Project } from "../../data/projects";
 import { getProjectImages } from "../../utils/projectImages";
 
@@ -12,6 +12,31 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   const [selectedImage, setSelectedImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isViewerOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsViewerOpen(false);
+      }
+
+      if (event.key === "ArrowLeft") {
+        setSelectedImage((current) => Math.max(current - 1, 0));
+      }
+
+      if (event.key === "ArrowRight") {
+        setSelectedImage((current) => Math.min(current + 1, images.length - 1));
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+
+  }, [isViewerOpen, images.length]);
 
   return (
     <>
@@ -76,7 +101,14 @@ function ProjectCard({ project }: ProjectCardProps) {
     </article>
 
     {isViewerOpen && (
-        <div className="image-viewer">
+        <div 
+          className="image-viewer"
+          onClick={(event) => {
+            if (event.target === event.currentTarget) {
+              setIsViewerOpen(false);
+            }
+          }}
+        >
           <button 
             type="button"
             className="viewer-close"

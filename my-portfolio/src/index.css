@@ -910,4 +910,40 @@ textarea {
   .footer-links {
     flex-wrap: wrap;
   }
+
+  .image-viewer {
+    padding: 1rem;
+  }
+
+  .viewer-image {
+    max-width: 90vw;
+    max-height: 75vh;
+  }
+
+  .viewer-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
+
+  .viewer-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.7rem;
+  }
+
+  .viewer-prev {
+    left: 0.75rem;
+  }
+
+  .viewer-next {
+    right: 0.75rem;
+  }
+
+  .viewer-counter {
+    bottom: 1rem;
+    font-size: 0.85rem;
+  }
 }
