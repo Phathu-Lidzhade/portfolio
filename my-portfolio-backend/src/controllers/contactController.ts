@@ -85,6 +85,6 @@ export const submitContactForm = async (
 
   return res.status(200).json({
     success: true,
-    message: "Message send successfully.",
+    message: "Message sent successfully.",
   });
 };

@@ -27,13 +27,44 @@ function Contact() {
     }));
   };
 
+  const waitForBackend = async (): Promise<boolean> => {
+    const healthUrl = `${import.meta.env.VITE_API_URL}/api/health`;
+
+    for (let attempt = 1; attempt <= 10; attempt++) {
+      try {
+        const response = await fetch(healthUrl);
+
+        if (response.ok) {
+          return true;
+        }
+      } catch {
+        //backend
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+    }
+
+    return false;
+  };
+
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setIsSubmitting(true);
-    setStatus("");
+    setStatus("Starting contact service...");
 
     try {
+      const backendReady = await waitForBackend();
+
+      if (!backendReady) {
+        setStatus(
+          "The contact service is taking longer than expected. Please try again in a moment."
+        );
+        return;
+      }
+
+      setStatus("Sending your message...");
+
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
         method: "POST",
         headers: {
@@ -57,10 +88,10 @@ function Contact() {
       });
 
     } catch (error) {
+      console.error("Contact form error:", error);
+
       setStatus(
-        error instanceof Error
-        ? error.message
-        : "Unable to send your message."
+        "We couldn't connect to the contact service. Please try again shortly."
       );
     }
     finally {
