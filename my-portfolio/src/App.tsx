@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -22,6 +24,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <Analytics />
     </>
   );
 }
