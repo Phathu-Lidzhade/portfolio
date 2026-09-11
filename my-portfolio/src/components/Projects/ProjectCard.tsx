@@ -44,7 +44,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       <div className="project-image">
         <img 
           src={images[selectedImage]} 
-          alt={`${project.title} screenshot ${selectedImage + 1}`}
+          alt={`${project.title} screenshot ${selectedImage + 1} of ${images.length}`}
           onClick={() => setIsViewerOpen(true)} 
         />
       </div>
@@ -103,6 +103,9 @@ function ProjectCard({ project }: ProjectCardProps) {
     {isViewerOpen && (
         <div 
           className="image-viewer"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${project.title} image viewer`}
           onClick={(event) => {
             if (event.target === event.currentTarget) {
               setIsViewerOpen(false);
@@ -115,7 +118,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             onClick={() => setIsViewerOpen(false)}
             aria-label="Close image viewer"
           >
-            x
+            ×
           </button>
 
           <button

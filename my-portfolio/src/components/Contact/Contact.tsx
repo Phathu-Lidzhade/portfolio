@@ -140,7 +140,7 @@ function Contact() {
 
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form" onSubmit={handleSubmit} aria-busy={isSubmitting}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input 
@@ -184,7 +184,14 @@ function Contact() {
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
 
-            {status && <p className="form-status">{status}</p>}
+            {status && 
+              <p className="form-status"
+              aria-live="polite"
+              role="status"
+              >
+                {status}
+              </p>
+            }
 
           </form>
         </div>
