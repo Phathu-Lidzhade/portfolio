@@ -9,7 +9,7 @@ const education: EducationItem[] = [
     institution: "University Of Venda",
     qualification: "Bachelor of Science in Computer Science",
     period: "2022 - 2026",
-    description: "Studying computer science with a focus on software development, algorithms, database design, networking, artificial intelligence and software engineering.",
+    description: "Completed BSc in Computer Science degree, included modules such as Software Engineering, Database Systems, Advanced Algorithms, Operating Systems, and Artificial Intelligence.",
   },
   {
     institution: "IT Varsity",
