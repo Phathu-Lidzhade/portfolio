@@ -9,10 +9,13 @@ function About() {
 
         <div className="about-content">
           <p>
-            I'm a Computer Science student with an interest in software development and web technologies. I enjoy practical applications that solve real problems.
+            I'm a Computer Science graduate from the University of Venda. I was born and raised in Phiphidi village, Limpopo, I'm a quiet but observant person who is quick on grasping new concepts and information.
           </p>
           <p>
-            I'm currently developing my skills in React, TypeScript, Node.js, databases and software engineering while working on personal and academic projects.
+            I enjoy playing games and programming, and I hope to get a chance to help develop a game in the future through a work opportunity or collaboration or developing one on my own. I also enjoy learning new programming languages and frameworks, and I hope to continue to grow my skills in the future.
+          </p>
+          <p>
+            Thank you for taking an interest in me and visiting my portfolio and hearing a little about me. I hope you enjoy looking through my projects and learning more about me.
           </p>
         </div>
       </div>
