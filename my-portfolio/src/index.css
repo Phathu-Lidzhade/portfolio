@@ -287,7 +287,7 @@ textarea {
 
 .skill {
   padding: 0.6rem 1rem;
-  background: var(--surface);
+  background: var(--border);
   border-radius: 999px;
   font-size: 0.95rem;
 }
