@@ -38,6 +38,16 @@ function ProjectCard({ project }: ProjectCardProps) {
 
   }, [isViewerOpen, images.length]);
 
+  useEffect(() => {
+    if (!isViewerOpen) return;
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isViewerOpen]);
+
   return (
     <>
     <article className="project-card">
