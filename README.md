@@ -59,11 +59,11 @@ Deployment
 The project is separated into a frontend and backend application:
 
 portfolio/
-├── my-portfolio/
-│   └── React + TypeScript + Vite frontend
-│
-└── my-portfolio-backend/
-    └── Node.js + Express + TypeScript backend
+ my-portfolio/
+    React + TypeScript + Vite frontend
+
+ my-portfolio-backend/
+     Node.js + Express + TypeScript backend
 
 🚀 Getting Started
 
