@@ -1,4 +1,4 @@
-Phathutshedzo Lidzhade — Portfolio
+# Phathutshedzo Lidzhade — Portfolio
 
 A personal portfolio website showcasing my projects, technical skills, education, and experience as a Computer Science graduate focused on software development and modern web technologies.
 
@@ -6,13 +6,13 @@ A personal portfolio website showcasing my projects, technical skills, education
 
 Portfolio: https://phathu-lidzhade-portfolio.vercel.app
 
-📌 About
+## 📌 About
 
 This portfolio was built to provide an overview of my background, technical skills, and software development projects.
 
 The website includes a responsive interface, project galleries, dark mode, an accessible contact form, and a backend service for processing contact enquiries.
 
-✨ Features
+## ✨ Features
 
 * Responsive design for desktop and mobile
 * Light and dark mode
@@ -32,7 +32,7 @@ The website includes a responsive interface, project galleries, dark mode, an ac
 * Background scrolling disabled while modals are open
 * Accessible focus states and ARIA attributes
 
-🛠️ Technologies
+## 🛠️ Technologies
 
 Frontend
 
@@ -54,7 +54,7 @@ Deployment
 * Vercel — Frontend
 * Render — Backend
 
-📂 Project Structure
+## 📂 Project Structure
 
 The project is separated into a frontend and backend application:
 
@@ -65,7 +65,7 @@ portfolio/
  my-portfolio-backend/
      Node.js + Express + TypeScript backend
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 Prerequisites
 
@@ -121,7 +121,7 @@ The backend API will run locally on:
 
 http://localhost:5000
 
-📬 Contact Form
+## 📬 Contact Form
 
 The portfolio uses a separate Node.js/Express backend to process contact form submissions.
 
@@ -143,7 +143,7 @@ GET /api/health
 
 This is used by the frontend to check whether the backend is available before submitting a contact request.
 
-🖼️ Project Gallery
+## 🖼️ Project Gallery
 
 Project screenshots are stored within the frontend assets and loaded dynamically using Vite’s import.meta.glob.
 
@@ -154,13 +154,13 @@ Each project can contain multiple screenshots, allowing visitors to:
 * Navigate between images
 * Use keyboard controls
 
-🔐 Privacy
+## 🔐 Privacy
 
 The contact form collects information such as a visitor’s name, email address, and message.
 
 A Privacy Policy is available directly within the contact section through a modal, so visitors can read how their information is handled without leaving the portfolio.
 
-♿ Accessibility
+## ♿ Accessibility
 
 Accessibility was considered throughout the project, including:
 
@@ -172,7 +172,7 @@ Accessibility was considered throughout the project, including:
 * Esc support for closing overlays
 * Disabled submit button while a message is being sent
 
-📱 Responsive Design
+## 📱 Responsive Design
 
 The portfolio is designed to work across different screen sizes, including:
 
@@ -182,7 +182,7 @@ The portfolio is designed to work across different screen sizes, including:
 
 The layout adapts sections such as the navigation, project grid, education cards, contact section, and project image viewer for smaller screens.
 
-👤 Author
+## 👤 Author
 
 Phathutshedzo Lidzhade
 
