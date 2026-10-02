@@ -10,7 +10,7 @@ function Hero() {
           <span>Lidzhade</span>
         </h1>
 
-        <h2>I build software that solves real problems.</h2>
+        <h2>Building software that solves real problems.</h2>
 
         <p className="hero-description">Computer Science graduate focused on web development and software engineering and modern technologies</p>
 
