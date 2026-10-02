@@ -18,7 +18,7 @@
 
   --max-width: 1200px;
 
-  --section-padding: 3rem 8%;
+  --section-padding: 6rem 8%;
 
   --radius-small: 8px;
   --radius-medium: 16px;
@@ -87,6 +87,7 @@ textarea {
   justify-content: space-between;
   gap: 4rem;
   padding: var(--section-padding);
+  padding-top: 0;
 }
 
 .hero-content {
