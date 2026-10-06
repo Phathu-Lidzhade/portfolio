@@ -30,6 +30,7 @@
 .footer-links a {
   color: var(--footer-text);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .footer-links a:hover {

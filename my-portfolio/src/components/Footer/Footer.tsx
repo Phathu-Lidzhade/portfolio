@@ -1,6 +1,10 @@
 import "./Footer.css";
 
-function Footer() {
+interface FooterProps {
+  onPrivacyClick: () => void;
+}
+
+function Footer({ onPrivacyClick }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return(
@@ -30,6 +34,10 @@ function Footer() {
 
           <a href="mailto:lidzhadephathuthsedzo027@gmail.com">
             Email
+          </a>
+
+          <a onClick={onPrivacyClick}>
+            Privacy Policy
           </a>
         </div>
       </div>
