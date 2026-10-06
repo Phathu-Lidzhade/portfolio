@@ -1,3 +1,5 @@
+import "./Education.css";
+
 interface EducationItem {
   institution: string;
   qualification: string;

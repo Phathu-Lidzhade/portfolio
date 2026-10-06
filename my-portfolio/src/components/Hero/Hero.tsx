@@ -1,4 +1,5 @@
 import profilePhoto from '../../assets/profile.jpg';
+import "./Hero.css";
 
 function Hero() {
   return (

@@ -1,3 +1,5 @@
+import "./Skills.css";
+
 interface Skill {
   name: string;
   category: "Frontend" | "Backend" | "Database" | "Tools";
