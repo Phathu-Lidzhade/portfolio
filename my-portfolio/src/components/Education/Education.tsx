@@ -9,21 +9,21 @@ interface EducationItem {
 const education: EducationItem[] = [
   {
     institution: "University Of Venda",
-    qualification: "Bachelor of Science in Computer Science",
+    qualification: "Bachelor of Science in Computer Sciences",
     period: "2022 - 2026",
-    description: "Completed BSc in Computer Science degree, included modules such as Software Engineering, Database Systems, Advanced Algorithms, Operating Systems, and Artificial Intelligence.",
+    description: "Completed BSc in Computer Sciences degree, included modules such as Software Engineering, Database Systems, Advanced Algorithms, Operating Systems, and Artificial Intelligence.",
   },
   {
     institution: "IT Varsity",
     qualification: "FNB App Academy Certificate in FullStack Development",
-    period: "May 2025 - August 2025",
+    period: "May 2025 - July 2025",
     description: "Completed a short course hosted by FNB in collaboration with IT Varsity on FullStack Development, included HTML, CSS and JavaScript frontend lessons, Python, API's and Django backend lessons and SQL database lessons.",
   },
   {
     institution: "CSIR/UNIVEN",
-    qualification: "CSIR CyberSecurity Hackathon Participation Certificate",
+    qualification: "CSIR CyberSecureTech Hackathon Participation Certificate",
     period: "December 2025",
-    description: "Participated in a 3 day hackathon at the CSIR headquarters in Pretoria South Africa, worked as the developer in a 4 people team with varying roles.",
+    description: "Collaborated with a four-person team to develop a panic-button style application for emergency situations. Implemented functionality that sends the user’s tracking/location information to pre-assigned family and friends when the panic button is activated.",
   }
 ];
 
