@@ -2,31 +2,41 @@ import "./Skills.css";
 
 interface Skill {
   name: string;
-  category: "Frontend" | "Backend" | "Database" | "Tools";
+  category: "Programming Languages" | "Frontend Development" | "Backend Development" | "Development Tools";
 }
 
 const skills: Skill[] = [
-  { name: "React", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
-  { name: "JavaScript", category: "Frontend" },
-  { name: "HTML", category: "Frontend" },
-  { name: "CSS", category: "Frontend" },
+  { name: "C++", category: "Programming Languages" },
+  { name: "TypeScript", category: "Programming Languages" },
+  { name: "JavaScript", category: "Programming Languages" },
+  { name: "PHP", category: "Programming Languages" },
+  { name: "SQL", category: "Programming Languages" },
+  { name: "Python", category: "Programming Languages" },
+  { name: "Java", category: "Programming Languages" },
   
-  { name: "Node.js", category: "Backend" },
-  { name: "Express.js", category: "Backend" },
-  { name: "PHP", category: "Backend" },
+  { name: "React.js", category: "Frontend Development" },
+  { name: "HTML", category: "Frontend Development" },
+  { name: "CSS", category: "Frontend Development" },
+  { name: "JavaScript", category: "Frontend Development" },
+  { name: "TypeScript", category: "Frontend Development" },
+  { name: "Vite", category: "Frontend Development" },
 
-  { name: "MySQL", category: "Database" },
+  { name: "Node.js", category: "Backend Development" },
+  { name: "PHP", category: "Backend Development" },
+  { name: "Express.js", category: "Backend Development" },
+  { name: "MySQL", category: "Backend Development" },
+  { name: "SQL", category: "Backend Development" },
 
-  { name: "Git", category: "Tools" },
-  { name: "GitHub", category: "Tools" },
-  { name: "VS Code", category: "Tools" },
-  { name: "MySQL WorkBench", category: "Tools" },
-  { name: "XAMPP", category: "Tools" },
+  { name: "Git", category: "Development Tools" },
+  { name: "GitHub", category: "Development Tools" },
+  { name: "VS Code", category: "Development Tools" },
+  { name: "MySQL WorkBench", category: "Development Tools" },
+  { name: "XAMPP", category: "Development Tools" },
+  { name: "Apache", category: "Development Tools" },
 ];
 
 function Skills() {
-  const categories = ["Frontend", "Backend", "Database", "Tools"] as const;
+  const categories = ["Programming Languages", "Frontend Development", "Backend Development", "Development Tools"] as const;
 
   return(
     <section className="skills" id="skills">
