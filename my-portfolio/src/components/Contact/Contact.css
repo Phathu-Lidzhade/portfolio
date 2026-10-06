@@ -57,13 +57,13 @@
   gap: 1.25rem;
 }
 
-.contact-group {
+.form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.contact-group label {
+.form-group label {
   font-weight: 600;
 }
 
@@ -104,7 +104,7 @@
   line-height: 1.6;
 }
 
-.contact-form .privacy-link {
+.contact .privacy-link {
   border: none;
   background: transparent;
   padding: 0;
@@ -117,7 +117,7 @@
   transition: color 0.2s ease;
 }
 
-.contact-form .privacy-link:hover {
+.contact .privacy-link:hover {
   background: transparent;
   color: var(--accent);
   transform: none;
