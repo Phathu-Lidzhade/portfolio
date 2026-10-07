@@ -13,10 +13,10 @@ function Hero() {
 
         <h2>Building software that solves real problems.</h2>
 
-        <p className="hero-description">Computer Science graduate focused on web development and software engineering and modern technologies</p>
+        <p className="hero-description">Computer Science graduate focused on software engineering, web development and modern technologies</p>
 
         <span className="hero-stack">
-          React ● TypeScript ● Node.js ● MySQL
+          React ● TypeScript ● Node.js
         </span>
 
         <p className="hero-opportunity">● Open to opportunities</p>

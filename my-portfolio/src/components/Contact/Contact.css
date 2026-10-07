@@ -1,5 +1,7 @@
 .contact {
   padding: var(--section-padding);
+
+  background-color: var(--section-contact);
 }
 
 .contact-container {

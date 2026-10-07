@@ -1,5 +1,7 @@
 .projects {
   padding: var(--section-padding);
+
+  background-color: var(--section-projects);
 }
 
 .projects-container {

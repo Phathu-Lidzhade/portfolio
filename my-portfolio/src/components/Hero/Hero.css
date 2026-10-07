@@ -6,6 +6,8 @@
   gap: 4rem;
   padding: var(--section-padding);
   padding-top: 0;
+
+  background-color: var(--section-hero);
 }
 
 .hero-content {

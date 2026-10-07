@@ -1,5 +1,7 @@
 .about {
   padding: var(--section-padding);
+
+  background-color: var(--section-about);
 }
 
 .about-container {

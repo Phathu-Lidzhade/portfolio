@@ -2,6 +2,8 @@
   padding: 3rem 8% 1.5rem;
   background: var(--footer-background);
   color: var(--footer-text);
+
+  background-color: var(--section-footer);
 }
 
 .footer-container {

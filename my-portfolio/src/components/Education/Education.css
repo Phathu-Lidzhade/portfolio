@@ -1,6 +1,8 @@
 .education {
   padding: var(--section-padding);
   background: var(--surface);
+
+  background-color: var(--section-education);
 }
 
 .education-container {

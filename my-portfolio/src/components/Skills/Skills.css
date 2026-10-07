@@ -1,6 +1,8 @@
 .skills{
   padding: var(--section-padding);
   background: var(--surface);
+
+  background-color: var(--section-skills);
 }
 
 .skills-container {

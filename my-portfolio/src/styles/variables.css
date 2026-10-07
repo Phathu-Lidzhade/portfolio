@@ -26,6 +26,16 @@
 }
 
 [data-theme="dark"] {
+  /*Color palette*/
+  --section-navbar: #001829ff;
+  --section-hero: #003052ff;
+  --section-about: #002844ff;
+  --section-skills: #002037ff;
+  --section-projects: #001829ff;
+  --section-education: #00101Bff;
+  --section-contact: #00080Eff;
+  --section-footer: #000000ff;
+
   --background: #111111;
   --surface: #1b1b1b;
 
