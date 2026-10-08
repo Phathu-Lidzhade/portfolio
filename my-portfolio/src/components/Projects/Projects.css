@@ -183,6 +183,8 @@
   background: var(--surface);
   border-radius: 6px;
   font-size: 0.85rem;
+
+  background-color: var(--border);
 }
 
 .project-links {

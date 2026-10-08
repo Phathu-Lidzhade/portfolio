@@ -106,6 +106,8 @@
 
     background: var(--background);
     border-bottom: 1px solid var(--border);
+
+    background-color: var(--section-navbar);
   }
 
   .nav-menu.open {

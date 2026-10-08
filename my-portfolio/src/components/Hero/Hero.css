@@ -69,6 +69,8 @@
   background: var(--accent);
   color: white;
   padding: 5px;
+
+  background-color: var(--border);
 }
 
 .primary-btn:hover {
@@ -79,6 +81,8 @@
   border: 2px solid #666666;
   color: var(--text);
   padding: 5px;
+
+  border-color: var(--border);
 }
 
 .secondary-btn:hover {
@@ -131,6 +135,8 @@
   background: var(--surface);
   padding: 10px;
   border-radius: 20px;
+
+  background-color: var(--border);
 }
 
 .hero-opportunity{
