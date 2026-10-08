@@ -119,7 +119,7 @@ function Contact({ onPrivacyClick }: ContactProps) {
             <div className="contact-item">
               <h3>Email</h3>
               <a href="mailto:lidzhadephathutshedzo027@gmail.com">
-                lidzhadephathutshedzo027@gmail.com
+                lidzhadephathutshedzo027@gmail.com ↗
               </a>
             </div>
 
@@ -129,7 +129,7 @@ function Contact({ onPrivacyClick }: ContactProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Phathu Lidzhade
+                Phathu Lidzhade ↗
               </a>
             </div>
 
@@ -139,7 +139,7 @@ function Contact({ onPrivacyClick }: ContactProps) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Phathutshedzo Lidzhade
+                Phathutshedzo Lidzhade ↗
               </a>
             </div>
 
@@ -198,7 +198,7 @@ function Contact({ onPrivacyClick }: ContactProps) {
               </p>
             }
 
-            <p>Your information is only used to respond to your enquiry. By submitting this form, you agree to the processing of your your information.{" "}
+            <p>Your information is only used to respond to your enquiry. By submitting this form, you agree to the processing of your information.{" "}
               <button
                 type="button"
                 className="privacy-link"
