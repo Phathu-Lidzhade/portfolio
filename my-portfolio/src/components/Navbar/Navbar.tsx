@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,6 +30,11 @@ function Navbar() {
     setIsDarkMode((currentMode) => !currentMode);
   };
 
+  const handleThemeClick = () => {
+    toggleTheme();
+    closeMenu();
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -38,8 +44,8 @@ function Navbar() {
 
         <button 
           type="button" 
-          className="menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`menu-button ${isMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMenuOpen((current) => !current)}
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
         >
@@ -76,7 +82,7 @@ function Navbar() {
           <button 
             type="button"
             className="theme-toggle" 
-            onClick={toggleTheme}
+            onClick={handleThemeClick}
             aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
           >
             {isDarkMode ? "☀️" : "🌙"}

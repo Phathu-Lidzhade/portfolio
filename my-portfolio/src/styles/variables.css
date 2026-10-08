@@ -1,0 +1,105 @@
+:root {
+  /*Color palette*/
+  --section-navbar: #FFFFFF;
+  --section-hero: #FFFFFF;
+  --section-about: #FFFFFF;
+  --section-skills: #efefef;
+  --section-projects: #FFFFFF;
+  --section-education: #efefef;
+  --section-contact: #FFFFFF;
+  --section-footer: #000000;
+
+  --background: #ffffff;
+  --surface: #efefef;
+
+  --text: #111111;
+  --text-muted: #666666;
+
+  --border: #c6c6c6;
+  --hero-button-border: #8e8e8e;
+
+  --accent: #5b5b5b;
+  --accent-dark: #3f3f3f;
+  --accent-text: #ffffff;
+
+  --footer-background: #111111;
+  --footer-text: #ffffff;
+  --footer-muted: #aaaaaa;
+  --footer-border: #333333;
+
+  --max-width: 1200px;
+
+  --section-padding: 6rem 8%;
+
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+}
+
+/*
+:root {
+  /*Color palette*
+  --section-navbar: #FFFFFF;
+  --section-hero: #FFFFFF;
+  --section-about: #E8EFFC;
+  --section-skills: #D0DEF9;
+  --section-projects: #B9CEF7;
+  --section-education: #A2BDF4;
+  --section-contact: #8AADF1;
+  --section-footer: #000000;
+
+  --background: #9CB6EB;
+  --surface: #f2f2f2;
+
+  --text: #111111;
+  --text-muted: #666666;
+
+  --border: #C4D6FC;
+
+  --accent: #5b5b5b;
+  --accent-dark: #3f3f3f;
+  --accent-text: #ffffff;
+
+  --footer-background: #111111;
+  --footer-text: #ffffff;
+  --footer-muted: #aaaaaa;
+  --footer-border: #333333;
+
+  --max-width: 1200px;
+
+  --section-padding: 6rem 8%;
+
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
+}*/
+
+[data-theme="dark"] {
+  /*Color palette*/
+  --section-navbar: #001829ff;
+  --section-hero: #003052ff;
+  --section-about: #002844ff;
+  --section-skills: #002037ff;
+  --section-projects: #001829ff;
+  --section-education: #00101Bff;
+  --section-contact: #00080Eff;
+  --section-footer: #000000ff;
+
+  --background: #000C25;
+  --surface: #1b1b1b;
+
+  --text: #ffffff;
+  --text-muted: #aaaaaa;
+
+  --border: #3E5D8B;
+  --hero-button-border: #3E5D8B;
+
+  --accent: #a0a0a0;
+  --accent-dark: #c0c0c0;
+  --accent-text: #111111;
+
+  --footer-background: #080808;
+  --footer-text: #f5f5f5;
+  --footer-muted: #999999;
+  --footer-border: #2a2a2a;
+}
