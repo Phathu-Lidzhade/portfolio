@@ -44,8 +44,8 @@ function Navbar() {
 
         <button 
           type="button" 
-          className="menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`menu-button ${isMenuOpen ? "open" : ""}`}
+          onClick={() => setIsMenuOpen((current) => !current)}
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
         >
