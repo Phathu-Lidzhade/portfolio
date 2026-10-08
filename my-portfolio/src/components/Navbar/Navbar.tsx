@@ -30,6 +30,11 @@ function Navbar() {
     setIsDarkMode((currentMode) => !currentMode);
   };
 
+  const handleThemeClick = () => {
+    toggleTheme();
+    closeMenu();
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -77,7 +82,7 @@ function Navbar() {
           <button 
             type="button"
             className="theme-toggle" 
-            onClick={toggleTheme}
+            onClick={handleThemeClick}
             aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
           >
             {isDarkMode ? "☀️" : "🌙"}
